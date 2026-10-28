@@ -11,14 +11,7 @@ bandeira[4:8, 6:12] = (240, 190, 40) # retângulo no meio
 st.image(ampliar(bandeira))
 
 
-# 1. Faixa da esquerda: Azul (B=255, G=0, R=0) -> colunas de 0 a 6
 bandeira[:, :6] = (255, 0, 0)
-
-# 2. Faixa do meio: Branco (B=255, G=255, R=255) -> colunas de 6 a 12
 bandeira[:, 6:12] = (255, 255, 255)
-
-# 3. Faixa da direita: Vermelho (B=0, G=0, R=255) -> colunas de 12 a 18
 bandeira[:, 12:] = (0, 0, 255)
-
-# Exibir a imagem ampliada no Streamlit
 st.image(ampliar(bandeira))
